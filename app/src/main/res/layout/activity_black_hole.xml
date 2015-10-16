@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/black_hole">
+
+    <EditText
+        android:id="@+id/etText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:hint="Type  Your Feelings Here"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnScream1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp"
+        android:background="@android:color/transparent"
+        android:text="Scream"
+        android:textColor="#E60000" />
+</RelativeLayout>

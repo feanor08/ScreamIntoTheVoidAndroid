@@ -1,40 +1,39 @@
 package lastweektonight.funstuff.feanor.screamintothevoid;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.media.MediaPlayer;
-import android.os.Handler;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
-
 import android.widget.Toast;
 
-
-public class MainActivity extends Activity implements View.OnClickListener {
+/**
+ * Created by feanor on 10/16/2015.
+ */
+public class BlackHoleActivity extends Activity implements View.OnClickListener {
     Button btnSend;
     EditText etText;
     Handler handler;
     MediaPlayer mp;
 
     int sound;
-    Bundle extras;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        extras = null;
-        btnSend = (Button) findViewById(R.id.btnScream);
-        etText = (EditText) findViewById(R.id.etText);
+        setContentView(R.layout.activity_black_hole);
+
+        btnSend = (Button) findViewById(R.id.btnScream1);
+        etText = (EditText) findViewById(R.id.etText1);
+
         sound = R.raw.scream1;
-        if (extras != null) {
-            sound = extras.getInt("keySound");
-        }
+        mp = new MediaPlayer();
+
 
         mp = MediaPlayer.create(this, sound);
 
@@ -53,7 +52,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
 
-            case R.id.btnScream:
+            case R.id.btnScream1:
                 StartAnimations();
                 mp.start();
                 handler = new Handler();
@@ -67,8 +66,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 handler.postDelayed(new Runnable() {
                     public void run() {
                         mp.reset();
-                        mp.release();
-                        mp = MediaPlayer.create(getApplicationContext(), sound);
                         etText.setHint("Done? Or you still feeling it? Get it out");
                     }
                 }, 2000);
@@ -78,3 +75,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 }
+
+
+
+

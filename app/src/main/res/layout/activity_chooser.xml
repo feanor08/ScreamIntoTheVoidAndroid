@@ -37,6 +37,10 @@
                 android:layout_height="55dp"
                 android:background="@drawable/black_hole"
                 android:checked="true"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="2.0"
                 android:text="Scream into a Black Hole"
                 android:textColor="#FFFFFF" />
         </LinearLayout>

@@ -18,6 +18,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="94dp"
         android:hint="Type  Your Feelings Here"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="2.0"
         android:textColor="#FFFFFF" />
 
     <Button
@@ -26,9 +30,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-
         android:layout_marginBottom="141dp"
         android:background="#80000000"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="2.0"
         android:text="Scream"
         android:textColor="#E60000" />
 </RelativeLayout>
